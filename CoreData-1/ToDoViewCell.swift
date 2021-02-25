@@ -32,14 +32,27 @@ class ToDoViewCell: UITableViewCell {
                                               todo.dueDate!.toString(format: "MM YY DD"))
                     taskCompletedDate.text = "To be completed"
                 } else {
-                    taskNameLabel.text = todo.name
+                    taskNameLabel.attributedText = todo.name!.strikeThrough()
+                    taskDueDate.attributedText = String(format: "Due on %@",
+                                                        todo.dueDate!.toString(format: "MM yyyy dd")).strikeThrough()                    //taskNameLabel.text = todo.name
                     taskDueDate.text = String(format: "Due on %@",
                                               todo.dueDate!.toString(format: "MM YY DD"))
-                    taskCompletedDate.text = String(format: "Completed on %@", todo.dueDate!.toString(format: "MM YY DD"))
+                    //taskCompletedDate.text = String(format: "Completed on %@", todo.dueDate!.toString(format: "MM YY DD"))
                     
                 }
             }
         }
+    }
+    
+    override func prepareForReuse() {
+        taskNameLabel.attributedText = taskNameLabel.text!.removeAttributedText()
+        taskDueDate.attributedText =  taskDueDate.text!.removeAttributedText()
+        taskNameLabel.text = ""
+        taskDueDate.text = ""
+        taskCompletedDate.text = ""
+        super.prepareForReuse()
+        
+        
     }
     
     override func awakeFromNib() {

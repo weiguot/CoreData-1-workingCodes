@@ -12,6 +12,7 @@
 		3A80085225E69DE300150BE5 /* AddNewTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A80085125E69DE300150BE5 /* AddNewTaskViewModel.swift */; };
 		3A80085625E69EBB00150BE5 /* AddNewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A80085525E69EBB00150BE5 /* AddNewTaskViewController.swift */; };
 		3A80085925E6B89B00150BE5 /* TodoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A80085825E6B89B00150BE5 /* TodoListViewModel.swift */; };
+		3A80087925E7F56100150BE5 /* String+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A80087825E7F56100150BE5 /* String+extensions.swift */; };
 		3AFDB52025E54EE7001D609F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDB51F25E54EE7001D609F /* AppDelegate.swift */; };
 		3AFDB52225E54EE7001D609F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDB52125E54EE7001D609F /* SceneDelegate.swift */; };
 		3AFDB52425E54EE7001D609F /* ToDoListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDB52325E54EE7001D609F /* ToDoListController.swift */; };
@@ -30,6 +31,7 @@
 		3A80085125E69DE300150BE5 /* AddNewTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewTaskViewModel.swift; sourceTree = "<group>"; };
 		3A80085525E69EBB00150BE5 /* AddNewTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewTaskViewController.swift; sourceTree = "<group>"; };
 		3A80085825E6B89B00150BE5 /* TodoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewModel.swift; sourceTree = "<group>"; };
+		3A80087825E7F56100150BE5 /* String+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extensions.swift"; sourceTree = "<group>"; };
 		3AFDB51C25E54EE7001D609F /* CoreData-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoreData-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AFDB51F25E54EE7001D609F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AFDB52125E54EE7001D609F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				3A80084B25E6876900150BE5 /* CoreDataManager.swift */,
 				3A80084E25E69B2B00150BE5 /* Date+Extensions.swift */,
 				3A80085825E6B89B00150BE5 /* TodoListViewModel.swift */,
+				3A80087825E7F56100150BE5 /* String+extensions.swift */,
 			);
 			path = "CoreData-1";
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AFDB52425E54EE7001D609F /* ToDoListController.swift in Sources */,
+				3A80087925E7F56100150BE5 /* String+extensions.swift in Sources */,
 				3A80085625E69EBB00150BE5 /* AddNewTaskViewController.swift in Sources */,
 				3AFDB52025E54EE7001D609F /* AppDelegate.swift in Sources */,
 				3A80084F25E69B2B00150BE5 /* Date+Extensions.swift in Sources */,

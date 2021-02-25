@@ -9,22 +9,22 @@ import UIKit
 import CoreData
 
 class ToDoListController: UIViewController {
-
+    
     @IBOutlet weak var tableview: UITableView!
-   // var mockToDo = [ToDo]()
+    // var mockToDo = [ToDo]()
     var vm = TodoListViewModel()
     
-//    func mockData() {
-//        let todo = ToDo (context: CoreDataManager.shared.persistentContainer.viewContext)
-//        todo.name = "Some Name"
-//        todo.dueDate = Date()
-//        todo.id = UUID()
-//        todo.completed = false
-//        for _ in 0...9 {
-//            mockToDo.append(todo)
-//        }
-//
-//    }
+    //    func mockData() {
+    //        let todo = ToDo (context: CoreDataManager.shared.persistentContainer.viewContext)
+    //        todo.name = "Some Name"
+    //        todo.dueDate = Date()
+    //        todo.id = UUID()
+    //        todo.completed = false
+    //        for _ in 0...9 {
+    //            mockToDo.append(todo)
+    //        }
+    //
+    //    }
     
     
     override func viewDidLoad() {
@@ -33,11 +33,11 @@ class ToDoListController: UIViewController {
         tableview.delegate = self
         tableview.dataSource = self
         tableview.estimatedRowHeight = 44
-       // mockData()
+        // mockData()
         
         
     }
-
+    
     override func viewWillAppear (_ animated: Bool) {
         super.viewWillAppear(animated)
         vm.refreshData()
@@ -47,7 +47,7 @@ class ToDoListController: UIViewController {
         super.viewDidAppear(animated)
         self.tableview.reloadData()
     }
-
+    
 }
 
 extension ToDoListController: UITableViewDelegate, UITableViewDataSource {
@@ -73,6 +73,13 @@ extension ToDoListController: UITableViewDelegate, UITableViewDataSource {
             }))
             alertController.addAction(UIAlertAction(title: "NO", style: .default, handler: nil))
             present(alertController, animated: true)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            vm.deleteTask(indexPath.row){ (_) in tableView.deleteRows(at: [indexPath], with: .automatic)
+            }
         }
     }
 }

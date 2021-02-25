@@ -20,48 +20,48 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="254" id="Pm2-VN-TUk" customClass="ToDoViewCell" customModule="CoreData_1" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="254"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Pm2-VN-TUk" customClass="ToDoViewCell" customModule="CoreData_1" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pm2-VN-TUk" id="jUV-uh-eDo">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="254"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="62"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCj-6f-Nml">
-                                                    <rect key="frame" x="12" y="12" width="390" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0NL-hx-ki9">
-                                                    <rect key="frame" x="32" y="189" width="350" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jA5-H2-enZ">
-                                                    <rect key="frame" x="12" y="221.5" width="390" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ChF-07-NJI">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="62"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0NL-hx-ki9">
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Due Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jA5-H2-enZ">
+                                                            <rect key="frame" x="0.0" y="20.5" width="414" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Completed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCj-6f-Nml">
+                                                            <rect key="frame" x="0.0" y="41" width="414" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="jA5-H2-enZ" firstAttribute="top" secondItem="0NL-hx-ki9" secondAttribute="bottom" constant="12" id="1vg-HH-JSV"/>
-                                                <constraint firstItem="qCj-6f-Nml" firstAttribute="leading" secondItem="jUV-uh-eDo" secondAttribute="leading" constant="12" id="4lY-eg-L6N"/>
-                                                <constraint firstItem="qCj-6f-Nml" firstAttribute="top" secondItem="jUV-uh-eDo" secondAttribute="top" constant="12" id="5LG-T3-4VL"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="0NL-hx-ki9" secondAttribute="trailing" constant="12" id="Fxd-63-Oa6"/>
-                                                <constraint firstAttribute="trailing" secondItem="jA5-H2-enZ" secondAttribute="trailing" constant="12" id="KUG-uL-6Cl"/>
-                                                <constraint firstItem="jA5-H2-enZ" firstAttribute="leading" secondItem="jUV-uh-eDo" secondAttribute="leading" constant="12" id="R3a-Tz-fHw"/>
-                                                <constraint firstItem="0NL-hx-ki9" firstAttribute="leading" secondItem="jUV-uh-eDo" secondAttribute="leadingMargin" constant="12" id="ZcF-x7-1Yw"/>
-                                                <constraint firstAttribute="bottom" secondItem="jA5-H2-enZ" secondAttribute="bottom" constant="12" id="kiA-H4-oFf"/>
-                                                <constraint firstAttribute="trailing" secondItem="qCj-6f-Nml" secondAttribute="trailing" constant="12" id="kop-W2-lcX"/>
+                                                <constraint firstAttribute="bottom" secondItem="ChF-07-NJI" secondAttribute="bottom" id="BFU-iK-glb"/>
+                                                <constraint firstItem="ChF-07-NJI" firstAttribute="leading" secondItem="jUV-uh-eDo" secondAttribute="leading" id="Blt-lh-UTD"/>
+                                                <constraint firstItem="ChF-07-NJI" firstAttribute="top" secondItem="jUV-uh-eDo" secondAttribute="top" id="Z4o-7q-eiG"/>
+                                                <constraint firstAttribute="trailing" secondItem="ChF-07-NJI" secondAttribute="trailing" id="jQT-2r-Tt1"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="taskCompletedDate" destination="jA5-H2-enZ" id="bGp-0C-Hut"/>
-                                            <outlet property="taskDueDate" destination="0NL-hx-ki9" id="sdX-bI-chN"/>
-                                            <outlet property="taskNameLabel" destination="qCj-6f-Nml" id="9tt-wT-rl9"/>
+                                            <outlet property="taskCompletedDate" destination="qCj-6f-Nml" id="QkE-5T-gjC"/>
+                                            <outlet property="taskDueDate" destination="jA5-H2-enZ" id="ZkM-b5-gcq"/>
+                                            <outlet property="taskNameLabel" destination="0NL-hx-ki9" id="fKc-0i-hSN"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -90,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kH0-bR-cYi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1550.7246376811595" y="39.508928571428569"/>
+            <point key="canvasLocation" x="1370" y="13"/>
         </scene>
         <!--Add New Task View Controller-->
         <scene sceneID="j6y-If-6DX">

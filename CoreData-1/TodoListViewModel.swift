@@ -25,4 +25,9 @@ class TodoListViewModel {
     func refreshData() {
         self.todos = CoreDataManager.shared.getAlltodos()
     }
+    
+    func completeTaskAtIndex(_ index: Int, completion: @escaping(Bool) -> Void) {
+        self.refreshData()
+        CoreDataManager.shared.completeTask(todo: todos[index], completion: completion)
+    }
 }
